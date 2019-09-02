@@ -10,6 +10,7 @@ public interface BookingService {
 
     /**
      * Find bookings made by the given user
+     *
      * @param username the user's name
      * @return their bookings
      */
@@ -17,6 +18,7 @@ public interface BookingService {
 
     /**
      * Find hotels available for booking by some criteria.
+     *
      * @param criteria the search criteria
      * @return a list of hotels meeting the criteria
      */
@@ -24,6 +26,7 @@ public interface BookingService {
 
     /**
      * Find hotels by their identifier.
+     *
      * @param id the hotel id
      * @return the hotel
      */
@@ -31,7 +34,8 @@ public interface BookingService {
 
     /**
      * Create a new, transient hotel booking instance for the given user.
-     * @param hotelId the hotelId
+     *
+     * @param hotelId  the hotelId
      * @param userName the user name
      * @return the new transient booking instance
      */
@@ -39,14 +43,15 @@ public interface BookingService {
 
     /**
      * Persist the booking to the database
+     *
      * @param booking the booking
      */
     void persistBooking(Booking booking);
 
     /**
      * Cancel an existing booking.
+     *
      * @param id the booking id
      */
     void cancelBooking(Long id);
-
 }
